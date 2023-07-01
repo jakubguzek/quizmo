@@ -84,6 +84,18 @@ function nextQuestion() {
   renderQuestion(questionIndex);
 }
 
+function previousQuestion() {
+  var questionIndex;
+  console.log(questions.length)
+  if (currentQuestion.id === undefined || currentQuestion.id <= 0) {
+    questionIndex = 0;
+  } else {
+    questionIndex = currentQuestion.id - 1;
+  };
+  console.log(questionIndex)
+  renderQuestion(questionIndex);
+}
+
 function randomQuestion() {
   const questionIndex = Math.floor(Math.random() * questions.length);
   currentQuestion = {

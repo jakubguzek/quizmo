@@ -14,9 +14,14 @@
     <p id="result"> </p>
   </div>
   <div class="button-container">
-    <button class="check-button" onclick="check()">Sprawdź</button>
-    <button class="next-button" onclick="nextQuestion()"><i class="fa-solid fa-arrow-right" title="Next question"></i></button>
-    <button class="random-button" onclick="randomQuestion()"><i class="fa-solid fa-dice" title="Radnom question"></i></button>
+    <div>
+      <button class="check-button" title="Sprawdź poprawność odpowiedzi" onclick="check()">Sprawdź</button>
+    </div>
+    <div>
+      <button class="next-button" title="Wyświetl następne pytanie" onclick="nextQuestion()"><i class="fa-solid fa-arrow-right" title="Next question"></i></button>
+      <button class="previous-button" title="Wyświetl następne pytanie" onclick="nextQuestion()"><i class="fa-solid fa-arrow-left" title="Next question"></i></button>
+      <button class="random-button" title="Wylosuj pytanie" onclick="randomQuestion()"><i class="fa-solid fa-dice" title="Radnom question"></i></button>
+    </div>
   </div>
     <script src="./questions.js"></script>
     <script src="./index.js"></script>
