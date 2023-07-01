@@ -46,7 +46,10 @@ button {
 }
 
 .navigation-buttons-container {
-  width: 35%;
+  display: flex;
+  width: 45%;
+  justify-content: right;
+  align-items: right;
 }
 
 .answer-radio {
