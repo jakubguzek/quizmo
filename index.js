@@ -75,7 +75,7 @@ function renderQuestion(questionIndex) {
 function nextQuestion() {
   var questionIndex;
   console.log(questions.length)
-  if (currentQuestion.id === undefined || currentQuestion.id > questions.length - 1) {
+  if (currentQuestion.id === undefined || currentQuestion.id >= questions.length - 1) {
     questionIndex = 0;
   } else {
     questionIndex = currentQuestion.id + 1;
@@ -88,7 +88,7 @@ function previousQuestion() {
   var questionIndex;
   console.log(questions.length)
   if (currentQuestion.id === undefined || currentQuestion.id <= 0) {
-    questionIndex = 0;
+    questionIndex = questions.length - 1;
   } else {
     questionIndex = currentQuestion.id - 1;
   };
