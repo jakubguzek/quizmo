@@ -1,4 +1,4 @@
-const questions = JSON.parse(questions)
+const questions = JSON.parse(require("./questions.json"))
 var currentQuestion = {}
 const questionElement = document.getElementById("question-text");
 const formElement = document.getElementById("answers-form");
@@ -75,13 +75,11 @@ function renderQuestion(questionIndex) {
 
 function nextQuestion() {
   var questionIndex;
-  console.log(questionIndex)
+  console.log(questions.length)
   if (currentQuestion.id === undefined || currentQuestion.id > questions.length) {
     questionIndex = 0;
-    console.log(questionIndex)
   } else {
     questionIndex = currentQuestion.id + 1;
-    console.log(questionIndex)
   };
   console.log(questionIndex)
   renderQuestion(questionIndex);
