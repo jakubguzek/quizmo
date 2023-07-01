@@ -1,0 +1,48 @@
+body {
+  align-items: center;
+}
+
+button {
+  background-color: darksalmon;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.check-button {
+  width: 45%;
+}
+
+.next-button {
+  width: 8%;
+}
+
+.random-button {
+  width: 8%;
+}
+
+.question-container {
+  width: 70%;
+  margin: auto;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer-radio {
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#result {
+  font-style: italic;
+}
