@@ -1,3 +1,4 @@
+const questions = JSON.parse(questions)
 var currentQuestion = {}
 const questionElement = document.getElementById("question-text");
 const formElement = document.getElementById("answers-form");
