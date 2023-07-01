@@ -1,4 +1,4 @@
-export default [
+const questions = [
   {
     id: 0,
     question: "Dlaczego TMV jest dobrym modelem badawczym?",
