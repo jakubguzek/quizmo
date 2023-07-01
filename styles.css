@@ -16,7 +16,7 @@ button {
 }
 
 .previous-button {
-  width: 28%;
+  width: 25%;
 }
 
 .next-button {
@@ -24,7 +24,7 @@ button {
 }
 
 .random-button {
-  width: 28%;
+  width: 25%;
 }
 
 .question-container {
@@ -46,7 +46,7 @@ button {
 }
 
 .navigation-buttons-container {
-  width: 45%;
+  width: 35%;
 }
 
 .answer-radio {
