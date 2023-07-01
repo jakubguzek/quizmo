@@ -1,4 +1,5 @@
-const questions = JSON.parse(async () => await fetch("./questions.json").then(response => response.json()));
+var questions;
+JSON.parse(async () => await fetch("./questions.json").then(response => questions = response.json()));
 var currentQuestion = {}
 const questionElement = document.getElementById("question-text");
 const formElement = document.getElementById("answers-form");
