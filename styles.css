@@ -11,6 +11,22 @@ button {
   border: none;
 }
 
+.check-button {
+  width: 100%;
+}
+
+.previous-button {
+  width: 28%;
+}
+
+.next-button {
+  width: 28%;
+}
+
+.random-button {
+  width: 28%;
+}
+
 .question-container {
   width: 70%;
   margin: auto;
