@@ -82,6 +82,9 @@ function nextQuestion() {
     questionIndex = currentQuestion.id + 1;
   };
   console.log(questionIndex)
+  currentQuestion = {
+    ...questions[questionIndex]
+  };
   renderQuestion(questionIndex);
 }
 
@@ -95,6 +98,9 @@ function previousQuestion() {
     questionIndex = currentQuestion.id - 1;
   };
   console.log(questionIndex)
+  currentQuestion = {
+    ...questions[questionIndex]
+  };
   renderQuestion(questionIndex);
 }
 
