@@ -10,6 +10,15 @@ const submitButton = document.createElement("button");
 submitButton.innerText = "Sprawdź"
 submitButton.setAttribute("onclick", "check()")
 
+function toSet(array) {
+  const onlyUnique = (value, index, array) => { return array.indexOf(value) === index };
+  return [...array].filter(onlyUnique).sort()
+};
+
+function set_equality(array1, array2) {
+  return JSON.stringify(toSet(array1)) === JSON.stringify(toSet(array2));
+}
+
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -24,10 +33,9 @@ function check() {
   try {
     currentQuestion = {
       ...currentQuestion,
-      chosenAnswer: answer.get("answer").valueOf()
+      chosenAnswer: answer.getAll("answer").valueOf()
     }
-    console.log(currentQuestion);
-    if (currentQuestion.chosenAnswer === currentQuestion.correct) {
+    if (set_equality(currentQuestion.chosenAnswer, currentQuestion.correct)) {
       result.innerHTML = "<i class='fa-solid fa-check'></i> Dobrze!";
       result.style["color"] = "green";
     } else {
@@ -47,7 +55,7 @@ function answersToForm(formElement, answers) {
   const answerElements = shuffle(
     answers.map(answer => {
       const input = document.createElement("input")
-      input.setAttribute("type", "radio")
+      input.setAttribute("type", "checkbox")
       input.setAttribute("name", "answer")
       input.setAttribute("class", "answer-radio")
       input.setAttribute("id", `a${answer.id}`)
