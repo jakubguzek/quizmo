@@ -1,3 +1,8 @@
+/* TODO:
+ *  - create set_difference function
+ *  - add functionality for telling user how far off they are with their answer 
+ */
+
 var currentQuestion = {}
 const questionElement = document.getElementById("question-text");
 const formElement = document.getElementById("answers-form");
