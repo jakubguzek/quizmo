@@ -87,14 +87,11 @@ function renderQuestion(questionIndex) {
 
 function nextQuestion() {
   var questionIndex;
-  console.log(currentQuestion.id)
-  console.log(questions.length)
   if (currentQuestion.id === undefined || currentQuestion.id >= questions.length - 1) {
     questionIndex = 0;
   } else {
     questionIndex = currentQuestion.id + 1;
   };
-  console.log(questionIndex)
   currentQuestion = {
     ...questions[questionIndex]
   };
@@ -103,14 +100,11 @@ function nextQuestion() {
 
 function previousQuestion() {
   var questionIndex;
-  console.log(currentQuestion.id)
-  console.log(questions.length)
   if (currentQuestion.id === undefined || currentQuestion.id <= 0) {
     questionIndex = questions.length - 1;
   } else {
     questionIndex = currentQuestion.id - 1;
   };
-  console.log(questionIndex)
   currentQuestion = {
     ...questions[questionIndex]
   };
